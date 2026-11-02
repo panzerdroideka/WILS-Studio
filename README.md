@@ -1,4 +1,3 @@
-<img width="1333" height="1747" alt="Screenshot_20261102_215828" src="https://github.com/user-attachments/assets/e689ba75-3160-43e2-a01d-06b617609f09" />
 WILS Studio
 WILS Studio is a lightweight image analysis and export tool built in Python.
 
