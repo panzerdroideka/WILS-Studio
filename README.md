@@ -69,7 +69,7 @@ Here i present my first use of this tool!
 The First publication with this graphics tool used to crop and Upscayl this 
 image and make it useful to a YouTube Short Album Cover-Art
 
-After using this Graphics tool on thise here picture i got this picture 
+After using this Graphics tool i got this picture 
 to my tune "Our Brief Encounters-Våre korte blaff"
 <img width="1333" height="1747" alt="Screenshot_20261102_215828" src="https://github.com/user-attachments/assets/72957277-7cf3-4d28-96c2-e0c07ad3a16b" />
 
