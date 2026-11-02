@@ -1,0 +1,107 @@
+import sys
+from pathlib import Path
+
+from PyQt6.QtWidgets import (
+    QApplication,
+    QWidget,
+    QPushButton,
+    QFileDialog,
+    QLabel,
+    QVBoxLayout,
+)
+
+from PIL import Image
+from analyzer import analyze_image
+
+
+class WILSStudio(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("WILS Image Preparation Studio")
+        self.resize(800, 500)
+
+        self.title = QLabel(
+            "WILS Image Preparation Studio\n\n"
+            "Velg et bilde for analyse."
+        )
+
+        self.info = QLabel("Ingen fil valgt.")
+
+        self.button = QPushButton("Velg bilde")
+        self.button.clicked.connect(self.select_image)
+
+        layout = QVBoxLayout()
+        layout.addWidget(self.title)
+        layout.addWidget(self.button)
+        layout.addWidget(self.info)
+
+        self.setLayout(layout)
+
+    def select_image(self):
+
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Velg bildefil",
+            str(Path.home()),
+            "Bilder (*.png *.jpg *.jpeg *.webp *.bmp *.tif *.tiff)"
+        )
+
+        if not file_path:
+            return
+
+        try:
+            with Image.open(file_path) as img:
+                width, height = img.size
+
+            aspect = width / height
+
+            if height > width:
+                orientation = "Vertikal"
+            elif width > height:
+                orientation = "Horisontal"
+            else:
+                orientation = "Kvadratisk"
+		best, rankings = analyze_image(
+		width,
+		height
+	)		
+
+	ranking_text = ""
+
+	for item in rankings:
+	    ranking_text += (
+        	f"{item['status']} "
+	        f"{item['name']} "
+        	f"{item['score']}/100\n"
+	    )
+
+            self.info.setText(
+                f"""
+Fil:
+{Path(file_path).name}
+
+Oppløsning:
+{width} × {height}
+
+Orientering:
+{orientation}
+
+Aspect Ratio:
+{aspect:.4f}
+"""
+            )
+
+        except Exception as error:
+            self.info.setText(
+                f"Feil under analyse:\n{error}"
+            )
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+
+    window = WILSStudio()
+    window.show()
+
+    sys.exit(app.exec())
