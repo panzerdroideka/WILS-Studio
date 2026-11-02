@@ -66,8 +66,8 @@ Wils / Panzerdroideka
 
 Here i present my first use of this tool!
 
-The First publication with this graphics tool used to crop and Upscayl 
-this image and make it useful to a YouTube Short Album Cover-Art
+The First publication with this graphics tool used to crop and Upscayl this 
+image and make it useful to a YouTube Short Album Cover-Art
 <img width="1339" height="1730" alt="VåreBlaff_v3språk-218bpm" src="https://github.com/user-attachments/assets/18c7daf3-d19a-485a-9727-afb259763046" />
 
 After using this Graphics tool on thise here picture i got this picture 
