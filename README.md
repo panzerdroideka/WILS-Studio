@@ -68,6 +68,8 @@ Here i present my first use of this tool!
 
 The First publication with this graphics tool used to crop and Upscayl this 
 image and make it useful to a YouTube Short Album Cover-Art
+BASE Image, compressed 50% to Jpeg:
+<img width="6144" height="4096" alt="WilsNorseDiscoveries-GitGub" src="https://github.com/user-attachments/assets/84c57fd4-6ca9-4bc0-b734-667823edfcaa" />
 
 After using this Graphics tool i got this picture 
 to my tune "Our Brief Encounters-Våre korte blaff"
