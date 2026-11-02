@@ -1,4 +1,5 @@
-WILS Studio
+< WILS Studio >
+
 WILS Studio is a lightweight image analysis and export tool built in Python.
 
 The project helps creators evaluate and prepare images for:
